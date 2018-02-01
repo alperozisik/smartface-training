@@ -1,0 +1,13 @@
+{
+	"config": {
+		"theme": {
+			"currentTheme": "projeTheme",
+			"themes": [
+				"defaultTheme",
+				"projeTheme"
+			],
+			"baseTheme": "projeTheme"
+		},
+		"version": "6.6.0"
+	}
+}

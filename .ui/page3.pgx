@@ -1,0 +1,134 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "517c-5f2b-93ae-2eed",
+			"initialized": true,
+			"userProps": {},
+			"className": ".page",
+			"version": "6.6.0",
+			"props": {
+				"name": "page3",
+				"children": [
+					"6332-ce08-dcb2-c374",
+					"49f9-f0d7-68b8-8da1",
+					"d17e-90dd-e1fa-3672",
+					"ad9e-98ae-e847-5375",
+					"1c46-cc70-f1e2-055b",
+					"9e73-3b11-95bf-b887",
+					"581c-727e-965c-c37d"
+				],
+				"parent": null,
+				"orientation": "PORTRAIT"
+			}
+		},
+		{
+			"type": "StatusBar",
+			"id": "6332-ce08-dcb2-c374",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "49f9-f0d7-68b8-8da1",
+			"userProps": {
+				"title": "newPage001"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"title": "newPage001",
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "Button",
+			"id": "cf1e-6803-b09c-d525",
+			"userProps": {},
+			"className": ".button",
+			"props": {
+				"name": "button1",
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed"
+			}
+		},
+		{
+			"type": "Button",
+			"id": "d17e-90dd-e1fa-3672",
+			"userProps": {
+				"usePageVariable": true,
+				"text": "Page2"
+			},
+			"className": ".button",
+			"props": {
+				"name": "btn",
+				"text": "Page2",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed"
+			}
+		},
+		{
+			"type": "ImageView",
+			"id": "ad9e-98ae-e847-5375",
+			"userProps": {
+				"height": 40,
+				"width": null,
+				"image": "smartface.png",
+				"imageFillType": "NORMAL"
+			},
+			"className": ".imageView",
+			"props": {
+				"name": "imageView1",
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "1c46-cc70-f1e2-055b",
+			"userProps": {
+				"alpha": 1
+			},
+			"className": ".flexLayout",
+			"props": {
+				"name": "flexLayout1",
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "9e73-3b11-95bf-b887",
+			"userProps": {},
+			"className": ".label",
+			"props": {
+				"name": "label1",
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed"
+			}
+		},
+		{
+			"type": "MapView",
+			"id": "581c-727e-965c-c37d",
+			"userProps": {},
+			"className": ".mapView",
+			"props": {
+				"name": "mapView1",
+				"compassEnabled": true,
+				"rotateEnabled": true,
+				"scrollEnabled": true,
+				"children": [],
+				"parent": "517c-5f2b-93ae-2eed"
+			}
+		}
+	]
+}

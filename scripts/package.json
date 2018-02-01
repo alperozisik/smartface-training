@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@smartface/contx": "1.0.0",
+    "@smartface/styler": "^1.0.0",
+    "js-base": "1.0.4",
+    "sf-core": "2.0.7",
+    "sf-extension-amcharts": "^0.2.0",
+    "sf-extension-utils": "^3.2.1"
+  }
+}

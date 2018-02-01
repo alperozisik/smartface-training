@@ -1,0 +1,8 @@
+{
+	".alper": {
+		"backgroundColor": "rgba( 65, 117, 5, 1 )",
+		"+Device:Device.os == \"iOS\"": {
+			"backgroundColor": "rgba( 189, 16, 224, 1 )"
+		}
+	}
+}

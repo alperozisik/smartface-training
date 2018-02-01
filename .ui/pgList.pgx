@@ -1,0 +1,77 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "756a-504c-ce9e-37b9",
+			"initialized": true,
+			"userProps": {},
+			"className": ".page",
+			"version": "6.6.0",
+			"props": {
+				"name": "pgList",
+				"children": [
+					"a0c2-06f6-b482-bd79",
+					"b8ef-8c19-5dad-a58c",
+					"6363-96c5-21df-cc20"
+				],
+				"parent": null,
+				"orientation": "PORTRAIT"
+			}
+		},
+		{
+			"type": "StatusBar",
+			"id": "a0c2-06f6-b482-bd79",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"children": [],
+				"parent": "756a-504c-ce9e-37b9",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "b8ef-8c19-5dad-a58c",
+			"userProps": {
+				"title": "Liste"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"title": "Liste",
+				"children": [],
+				"parent": "756a-504c-ce9e-37b9",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "ListView",
+			"id": "6363-96c5-21df-cc20",
+			"userProps": {
+				"width": null,
+				"height": null,
+				"left": 0,
+				"right": 0,
+				"bottom": 0,
+				"top": 0,
+				"usePageVariable": true,
+				"rowHeight": 80,
+				"itemCount": 0,
+				"flexProps": {
+					"alignSelf": "AUTO",
+					"positionType": "ABSOLUTE"
+				}
+			},
+			"className": ".listView",
+			"props": {
+				"name": "list",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "756a-504c-ce9e-37b9",
+				"itemCount": 0,
+				"rowHeight": 80
+			}
+		}
+	]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us" style="padding:0;overflow-y:hidden;margin:0;">
+
+<head>
+    <title>Smartface AMChart Extension</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: -moz-none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <script type="text/javascript">
+        window.boubleEvent = function boubleEvent(event, data) {
+            var eventObject = {
+                event: event,
+                data: data || null
+            };
+            var eventString = encodeURIComponent(JSON.stringify(eventObject));
+            window.location = "amcharts://" + eventString;
+        };
+
+        window.addScript = function addScript(fileNames) {
+            if (typeof fileNames === "string") {
+                try {
+                    fileNames = JSON.parse(fileNames);
+                }
+                catch (fineNamesEx) {
+                    fileNames = [fileNames];
+                }
+            }
+            else {
+                fileNames = [];
+            }
+            var scriptLoadStatus = {};
+            window.boubleEvent("addScript", { fileNames: fileNames });
+            var headElement = document.getElementsByTagName('head')[0];
+
+            loadScript();
+
+            function loadScript() {
+                var scriptName = fileNames.shift();
+                if (scriptName) {
+                    if (scriptName.endsWith(".js"))
+                        scriptName.substr(0, scriptName.length - 3);
+                    var script = document.createElement('script');
+                    script.onload = function() {
+                        scriptLoadStatus[scriptName] = true;
+                        loadScript();
+                    };
+                    script.onerror = function(e) {
+                        scriptLoadStatus[scriptName] = false;
+                        loadScript();
+                    };
+                    script.src = "amcharts/" + scriptName + ".js";
+                    script.type = 'text/javascript';
+                    headElement.appendChild(script);
+                }
+                else {
+                    window.boubleEvent("scriptLoaded", scriptLoadStatus);
+                }
+            }
+        };
+
+        window.onload = function() {
+            window.boubleEvent("window.onload");
+        };
+    </script>
+</head>
+
+<body style="margin:0;padding:0;overflow-y:hidden;">
+    <div id='chart-container'>
+        <div id="chartdiv" style="width:100%;height:100%;position:absolute;margin:0;padding:0;"></div>
+    </div>
+
+    <script type="text/javascript" src="amcharts/amcharts.js"></script>
+</body>
+
+</html>
